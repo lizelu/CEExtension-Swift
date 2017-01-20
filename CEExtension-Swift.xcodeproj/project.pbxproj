@@ -12,6 +12,10 @@
 		F4865F351E31BC1200BB72AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4865F331E31BC1200BB72AA /* Main.storyboard */; };
 		F4865F371E31BC1200BB72AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4865F361E31BC1200BB72AA /* Assets.xcassets */; };
 		F4865F3A1E31BC1200BB72AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4865F381E31BC1200BB72AA /* LaunchScreen.storyboard */; };
+		F4865F431E31EAA700BB72AA /* CEColoreExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4865F421E31EAA700BB72AA /* CEColoreExtension.swift */; };
+		F4865F451E31ECD600BB72AA /* CEDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4865F441E31ECD600BB72AA /* CEDeviceExtension.swift */; };
+		F4865F471E31F44F00BB72AA /* CEScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4865F461E31F44F00BB72AA /* CEScreenExtension.swift */; };
+		F4865F491E31FACC00BB72AA /* CEBundleExtentsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4865F481E31FACC00BB72AA /* CEBundleExtentsion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		F4865F361E31BC1200BB72AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4865F391E31BC1200BB72AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4865F3B1E31BC1200BB72AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4865F421E31EAA700BB72AA /* CEColoreExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CEColoreExtension.swift; sourceTree = "<group>"; };
+		F4865F441E31ECD600BB72AA /* CEDeviceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CEDeviceExtension.swift; sourceTree = "<group>"; };
+		F4865F461E31F44F00BB72AA /* CEScreenExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CEScreenExtension.swift; sourceTree = "<group>"; };
+		F4865F481E31FACC00BB72AA /* CEBundleExtentsion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CEBundleExtentsion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +62,24 @@
 		F4865F2E1E31BC1200BB72AA /* CEExtension-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				F4865F411E31EA5A00BB72AA /* CEExtension-Swift */,
 				F4865F2F1E31BC1200BB72AA /* AppDelegate.swift */,
 				F4865F311E31BC1200BB72AA /* ViewController.swift */,
 				F4865F331E31BC1200BB72AA /* Main.storyboard */,
 				F4865F361E31BC1200BB72AA /* Assets.xcassets */,
 				F4865F381E31BC1200BB72AA /* LaunchScreen.storyboard */,
 				F4865F3B1E31BC1200BB72AA /* Info.plist */,
+			);
+			path = "CEExtension-Swift";
+			sourceTree = "<group>";
+		};
+		F4865F411E31EA5A00BB72AA /* CEExtension-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				F4865F421E31EAA700BB72AA /* CEColoreExtension.swift */,
+				F4865F441E31ECD600BB72AA /* CEDeviceExtension.swift */,
+				F4865F461E31F44F00BB72AA /* CEScreenExtension.swift */,
+				F4865F481E31FACC00BB72AA /* CEBundleExtentsion.swift */,
 			);
 			path = "CEExtension-Swift";
 			sourceTree = "<group>";
@@ -139,6 +159,10 @@
 			files = (
 				F4865F321E31BC1200BB72AA /* ViewController.swift in Sources */,
 				F4865F301E31BC1200BB72AA /* AppDelegate.swift in Sources */,
+				F4865F471E31F44F00BB72AA /* CEScreenExtension.swift in Sources */,
+				F4865F431E31EAA700BB72AA /* CEColoreExtension.swift in Sources */,
+				F4865F491E31FACC00BB72AA /* CEBundleExtentsion.swift in Sources */,
+				F4865F451E31ECD600BB72AA /* CEDeviceExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +285,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = AWN3A347S4;
 				INFOPLIST_FILE = "CEExtension-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ZeluLi.CEExtension-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -274,6 +299,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = AWN3A347S4;
 				INFOPLIST_FILE = "CEExtension-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ZeluLi.CEExtension-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -300,6 +326,7 @@
 				F4865F401E31BC1200BB72AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
