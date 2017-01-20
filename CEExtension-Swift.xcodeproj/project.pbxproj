@@ -16,6 +16,9 @@
 		F4865F451E31ECD600BB72AA /* CEDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4865F441E31ECD600BB72AA /* CEDeviceExtension.swift */; };
 		F4865F471E31F44F00BB72AA /* CEScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4865F461E31F44F00BB72AA /* CEScreenExtension.swift */; };
 		F4865F491E31FACC00BB72AA /* CEBundleExtentsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4865F481E31FACC00BB72AA /* CEBundleExtentsion.swift */; };
+		F4865F4B1E3205E700BB72AA /* CEViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4865F4A1E3205E700BB72AA /* CEViewExtension.swift */; };
+		F4865F4D1E3207BD00BB72AA /* CENavigationBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4865F4C1E3207BD00BB72AA /* CENavigationBarExtension.swift */; };
+		F4865F4F1E3215B700BB72AA /* CEImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4865F4E1E3215B700BB72AA /* CEImageExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		F4865F441E31ECD600BB72AA /* CEDeviceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CEDeviceExtension.swift; sourceTree = "<group>"; };
 		F4865F461E31F44F00BB72AA /* CEScreenExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CEScreenExtension.swift; sourceTree = "<group>"; };
 		F4865F481E31FACC00BB72AA /* CEBundleExtentsion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CEBundleExtentsion.swift; sourceTree = "<group>"; };
+		F4865F4A1E3205E700BB72AA /* CEViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CEViewExtension.swift; sourceTree = "<group>"; };
+		F4865F4C1E3207BD00BB72AA /* CENavigationBarExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CENavigationBarExtension.swift; sourceTree = "<group>"; };
+		F4865F4E1E3215B700BB72AA /* CEImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CEImageExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,9 @@
 				F4865F441E31ECD600BB72AA /* CEDeviceExtension.swift */,
 				F4865F461E31F44F00BB72AA /* CEScreenExtension.swift */,
 				F4865F481E31FACC00BB72AA /* CEBundleExtentsion.swift */,
+				F4865F4A1E3205E700BB72AA /* CEViewExtension.swift */,
+				F4865F4C1E3207BD00BB72AA /* CENavigationBarExtension.swift */,
+				F4865F4E1E3215B700BB72AA /* CEImageExtension.swift */,
 			);
 			path = "CEExtension-Swift";
 			sourceTree = "<group>";
@@ -158,7 +167,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4865F321E31BC1200BB72AA /* ViewController.swift in Sources */,
+				F4865F4B1E3205E700BB72AA /* CEViewExtension.swift in Sources */,
 				F4865F301E31BC1200BB72AA /* AppDelegate.swift in Sources */,
+				F4865F4F1E3215B700BB72AA /* CEImageExtension.swift in Sources */,
+				F4865F4D1E3207BD00BB72AA /* CENavigationBarExtension.swift in Sources */,
 				F4865F471E31F44F00BB72AA /* CEScreenExtension.swift in Sources */,
 				F4865F431E31EAA700BB72AA /* CEColoreExtension.swift in Sources */,
 				F4865F491E31FACC00BB72AA /* CEBundleExtentsion.swift in Sources */,
