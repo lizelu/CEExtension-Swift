@@ -20,6 +20,23 @@ enum CEScreenModeType : CGFloat {
     case Mid = 667  // 667 * 2 = 1334
     case Plus = 736   // 736 * 3 = 2208
     case Unkonw
+    
+    var description: String {
+        get {
+            switch self {
+            case .Mini:
+                return "3.5寸屏"
+            case .Small:
+                return "4.9寸屏"
+            case .Mid:
+                return "4.7寸屏"
+            case .Plus:
+                return "5.5寸屏"
+            default:
+                return "未知"
+            }
+        }
+    }
 }
 
 extension UIScreen {

@@ -61,8 +61,8 @@ extension UIView {
         }
     }
     
-    /// 左边距
-    var leftMargin : CGFloat {
+    /// 左
+    var left : CGFloat {
         get {
             return x
         }
@@ -72,8 +72,8 @@ extension UIView {
         }
     }
     
-    /// 右边距
-    var rightMargin : CGFloat {
+    /// 右
+    var right : CGFloat {
         get {
             return x + width
         }
@@ -83,8 +83,8 @@ extension UIView {
         }
     }
     
-    /// 上边距
-    var topMargin : CGFloat {
+    /// 上
+    var top : CGFloat {
         get {
             return y
         }
@@ -94,8 +94,8 @@ extension UIView {
         }
     }
     
-    /// 下边距
-    var bottomMargin : CGFloat {
+    /// 下
+    var bottom : CGFloat {
         get {
             return y + height
         }

@@ -37,6 +37,48 @@ class CEExtension_SwiftTests: XCTestCase {
         print("设备系统版本：\(systemVersion!)")
     }
     
+    func testScreenExtension() {
+        let screenHeight = UIScreen.height
+        print("屏幕高：\(screenHeight)")
+        
+        let screenWidth = UIScreen.width
+        print("屏幕高：\(screenWidth)")
+        
+        let mode = UIScreen.mode
+        print("屏幕尺寸大小\(mode.description)")
+    }
+    
+    func testBundleExtension() {
+        let bundleName = Bundle.name
+        print("BundlName: \(bundleName)")
+        
+        let appVersion = Bundle.appVersion
+        print("app版本号：\(appVersion)")
+
+        let appName = Bundle.appName
+        print("app名称：\(appName)")
+    }
+    
+    func testViewExtension() {
+        let testView = UIView(frame: CGRect(x: 10, y: 20, width: 60, height: 80))
+        
+        print("x: \(testView.x)")
+        print("y: \(testView.y)")
+        print("width: \(testView.width)")
+        print("height: \(testView.height)")
+        print("left: \(testView.left)")
+        print("right: \(testView.right)")
+        print("top: \(testView.top)")
+        print("bottom: \(testView.bottom)")
+        print("centerX: \(testView.centerX)")
+        print("centerY: \(testView.centerY)")
+        print("middleWidth: \(testView.middleWidth)")
+        print("middleHeight: \(testView.middleHeight)")
+        print("size: \(testView.size)")
+        print("origin: \(testView.origin)")
+        
+    }
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {

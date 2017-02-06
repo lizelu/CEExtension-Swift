@@ -25,4 +25,10 @@ extension Bundle {
             return bundlePath
         }
     }
+    
+    class var appName : String {
+        get {
+            return String(describing: Bundle.main.infoDictionary!["CFBundleDisplayName"]!)
+        }
+    }
 }
