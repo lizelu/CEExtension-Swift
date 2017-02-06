@@ -88,8 +88,8 @@ class CEExtension_SwiftTests: XCTestCase {
         print("图片的原始大小：\(img.size)")
         
         let newImage = img.imageByScaling(imageSize: CGSize(width: 50, height: 50))
+        XCTAssertNotNil(newImage)
         print("缩放后的图片大小：\(newImage?.size)")
-        
     }
     
     func testPerformanceExample() {
