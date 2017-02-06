@@ -25,7 +25,7 @@ extension UIColor {
     ///
     /// - Parameter hex: 0x00ffad
     /// - Returns: 相应的颜色对象
-    class func colorWithHex(hex: UInt) -> UIColor {
+    class func colorWithHex(hex: UInt32) -> UIColor {
         let r: CGFloat = CGFloat((hex & 0xff0000) >> 16)
         let g: CGFloat = CGFloat((hex & 0x00ff00) >> 8)
         let b: CGFloat = CGFloat(hex & 0x0000ff)

@@ -15,8 +15,11 @@
 		F44042B71E48142B0021C4D6 /* CENavigationBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44042B01E48142B0021C4D6 /* CENavigationBarExtension.swift */; };
 		F44042B81E48142B0021C4D6 /* CEScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44042B11E48142B0021C4D6 /* CEScreenExtension.swift */; };
 		F44042B91E48142B0021C4D6 /* CEViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44042B21E48142B0021C4D6 /* CEViewExtension.swift */; };
+		F44042BC1E48672D0021C4D6 /* ColorExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44042BB1E48672D0021C4D6 /* ColorExtensionViewController.swift */; };
+		F44042BD1E48672D0021C4D6 /* ColorExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44042BB1E48672D0021C4D6 /* ColorExtensionViewController.swift */; };
+		F44042BF1E486B920021C4D6 /* CEStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44042BE1E486B920021C4D6 /* CEStringExtension.swift */; };
+		F44042C01E486B920021C4D6 /* CEStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44042BE1E486B920021C4D6 /* CEStringExtension.swift */; };
 		F4865F301E31BC1200BB72AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4865F2F1E31BC1200BB72AA /* AppDelegate.swift */; };
-		F4865F321E31BC1200BB72AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4865F311E31BC1200BB72AA /* ViewController.swift */; };
 		F4865F351E31BC1200BB72AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4865F331E31BC1200BB72AA /* Main.storyboard */; };
 		F4865F371E31BC1200BB72AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4865F361E31BC1200BB72AA /* Assets.xcassets */; };
 		F4865F3A1E31BC1200BB72AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4865F381E31BC1200BB72AA /* LaunchScreen.storyboard */; };
@@ -50,9 +53,10 @@
 		F44042B01E48142B0021C4D6 /* CENavigationBarExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CENavigationBarExtension.swift; sourceTree = "<group>"; };
 		F44042B11E48142B0021C4D6 /* CEScreenExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CEScreenExtension.swift; sourceTree = "<group>"; };
 		F44042B21E48142B0021C4D6 /* CEViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CEViewExtension.swift; sourceTree = "<group>"; };
+		F44042BB1E48672D0021C4D6 /* ColorExtensionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtensionViewController.swift; sourceTree = "<group>"; };
+		F44042BE1E486B920021C4D6 /* CEStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CEStringExtension.swift; sourceTree = "<group>"; };
 		F4865F2C1E31BC1200BB72AA /* CEExtension-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CEExtension-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4865F2F1E31BC1200BB72AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F4865F311E31BC1200BB72AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F4865F341E31BC1200BB72AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F4865F361E31BC1200BB72AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4865F391E31BC1200BB72AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -109,6 +113,14 @@
 			path = "CEExtension-Swift/CEExtension-Swift";
 			sourceTree = SOURCE_ROOT;
 		};
+		F44042BA1E48670B0021C4D6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F44042BB1E48672D0021C4D6 /* ColorExtensionViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = SOURCE_ROOT;
+		};
 		F4865F231E31BC1200BB72AA = {
 			isa = PBXGroup;
 			children = (
@@ -130,9 +142,9 @@
 		F4865F2E1E31BC1200BB72AA /* CEExtension-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				F44042BA1E48670B0021C4D6 /* ViewController */,
 				F4865F411E31EA5A00BB72AA /* CEExtension-Swift */,
 				F4865F2F1E31BC1200BB72AA /* AppDelegate.swift */,
-				F4865F311E31BC1200BB72AA /* ViewController.swift */,
 				F4865F331E31BC1200BB72AA /* Main.storyboard */,
 				F4865F361E31BC1200BB72AA /* Assets.xcassets */,
 				F4865F381E31BC1200BB72AA /* LaunchScreen.storyboard */,
@@ -151,6 +163,7 @@
 				F4865F4A1E3205E700BB72AA /* CEViewExtension.swift */,
 				F4865F4C1E3207BD00BB72AA /* CENavigationBarExtension.swift */,
 				F4865F4E1E3215B700BB72AA /* CEImageExtension.swift */,
+				F44042BE1E486B920021C4D6 /* CEStringExtension.swift */,
 			);
 			path = "CEExtension-Swift";
 			sourceTree = "<group>";
@@ -264,7 +277,9 @@
 				F44042B81E48142B0021C4D6 /* CEScreenExtension.swift in Sources */,
 				F44042B61E48142B0021C4D6 /* CEImageExtension.swift in Sources */,
 				F44042B31E48142B0021C4D6 /* CEBundleExtentsion.swift in Sources */,
+				F44042BD1E48672D0021C4D6 /* ColorExtensionViewController.swift in Sources */,
 				F44042A41E4812B00021C4D6 /* CEExtension_SwiftTests.swift in Sources */,
+				F44042C01E486B920021C4D6 /* CEStringExtension.swift in Sources */,
 				F44042B41E48142B0021C4D6 /* CEColoreExtension.swift in Sources */,
 				F44042B51E48142B0021C4D6 /* CEDeviceExtension.swift in Sources */,
 				F44042B71E48142B0021C4D6 /* CENavigationBarExtension.swift in Sources */,
@@ -275,12 +290,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4865F321E31BC1200BB72AA /* ViewController.swift in Sources */,
 				F4865F4B1E3205E700BB72AA /* CEViewExtension.swift in Sources */,
 				F4865F301E31BC1200BB72AA /* AppDelegate.swift in Sources */,
 				F4865F4F1E3215B700BB72AA /* CEImageExtension.swift in Sources */,
 				F4865F4D1E3207BD00BB72AA /* CENavigationBarExtension.swift in Sources */,
+				F44042BC1E48672D0021C4D6 /* ColorExtensionViewController.swift in Sources */,
 				F4865F471E31F44F00BB72AA /* CEScreenExtension.swift in Sources */,
+				F44042BF1E486B920021C4D6 /* CEStringExtension.swift in Sources */,
 				F4865F431E31EAA700BB72AA /* CEColoreExtension.swift in Sources */,
 				F4865F491E31FACC00BB72AA /* CEBundleExtentsion.swift in Sources */,
 				F4865F451E31ECD600BB72AA /* CEDeviceExtension.swift in Sources */,
