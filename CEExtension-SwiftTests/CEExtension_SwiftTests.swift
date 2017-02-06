@@ -42,7 +42,7 @@ class CEExtension_SwiftTests: XCTestCase {
         print("屏幕高：\(screenHeight)")
         
         let screenWidth = UIScreen.width
-        print("屏幕高：\(screenWidth)")
+        print("屏幕宽：\(screenWidth)")
         
         let mode = UIScreen.mode
         print("屏幕尺寸大小\(mode.description)")

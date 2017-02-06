@@ -19,6 +19,8 @@
 		F44042BD1E48672D0021C4D6 /* ColorExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44042BB1E48672D0021C4D6 /* ColorExtensionViewController.swift */; };
 		F44042BF1E486B920021C4D6 /* CEStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44042BE1E486B920021C4D6 /* CEStringExtension.swift */; };
 		F44042C01E486B920021C4D6 /* CEStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44042BE1E486B920021C4D6 /* CEStringExtension.swift */; };
+		F44042C21E4871D90021C4D6 /* DeviceExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44042C11E4871D90021C4D6 /* DeviceExtensionViewController.swift */; };
+		F44042C31E4871D90021C4D6 /* DeviceExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44042C11E4871D90021C4D6 /* DeviceExtensionViewController.swift */; };
 		F4865F301E31BC1200BB72AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4865F2F1E31BC1200BB72AA /* AppDelegate.swift */; };
 		F4865F351E31BC1200BB72AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4865F331E31BC1200BB72AA /* Main.storyboard */; };
 		F4865F371E31BC1200BB72AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4865F361E31BC1200BB72AA /* Assets.xcassets */; };
@@ -55,6 +57,7 @@
 		F44042B21E48142B0021C4D6 /* CEViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CEViewExtension.swift; sourceTree = "<group>"; };
 		F44042BB1E48672D0021C4D6 /* ColorExtensionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtensionViewController.swift; sourceTree = "<group>"; };
 		F44042BE1E486B920021C4D6 /* CEStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CEStringExtension.swift; sourceTree = "<group>"; };
+		F44042C11E4871D90021C4D6 /* DeviceExtensionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceExtensionViewController.swift; sourceTree = "<group>"; };
 		F4865F2C1E31BC1200BB72AA /* CEExtension-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CEExtension-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4865F2F1E31BC1200BB72AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4865F341E31BC1200BB72AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -117,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				F44042BB1E48672D0021C4D6 /* ColorExtensionViewController.swift */,
+				F44042C11E4871D90021C4D6 /* DeviceExtensionViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = SOURCE_ROOT;
@@ -283,6 +287,7 @@
 				F44042B41E48142B0021C4D6 /* CEColoreExtension.swift in Sources */,
 				F44042B51E48142B0021C4D6 /* CEDeviceExtension.swift in Sources */,
 				F44042B71E48142B0021C4D6 /* CENavigationBarExtension.swift in Sources */,
+				F44042C31E4871D90021C4D6 /* DeviceExtensionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +305,7 @@
 				F4865F431E31EAA700BB72AA /* CEColoreExtension.swift in Sources */,
 				F4865F491E31FACC00BB72AA /* CEBundleExtentsion.swift in Sources */,
 				F4865F451E31ECD600BB72AA /* CEDeviceExtension.swift in Sources */,
+				F44042C21E4871D90021C4D6 /* DeviceExtensionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
