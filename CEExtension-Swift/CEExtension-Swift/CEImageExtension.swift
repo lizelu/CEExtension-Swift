@@ -8,6 +8,20 @@
 
 import UIKit
 extension UIImage {
+    /// View的高
+    var height : CGFloat {
+        get {
+            return self.size.height
+        }
+    }
+    
+    /// View的宽
+    var width : CGFloat {
+        get {
+            return self.size.width
+        }
+    }
+
     
     /// 图片等比缩放
     ///
@@ -42,6 +56,50 @@ extension UIImage {
         UIGraphicsBeginImageContext(imageSize)
         self.draw(in: thumbnailRect)
         return UIGraphicsGetImageFromCurrentImageContext()
+    }
+    
+    
+    /// 获取图片的局部
+    ///
+    /// - Parameter rect: 局部图片的范围
+    /// - Returns: 截取后的图片
+    func subImage(rect: CGRect) -> UIImage? {
+        let imageRef: CGImage = (self.cgImage?.cropping(to: rect))!
+        return UIImage(cgImage: imageRef, scale: self.scale, orientation: self.imageOrientation)
+    }
+    
+    
+    /// 压缩图片致指定尺寸
+    ///
+    /// - Parameter toSize: 压缩到的尺寸
+    /// - Returns: 返回压缩后的图片
+    func rescaleImage(toSize: CGSize) -> UIImage? {
+        UIGraphicsBeginImageContext(toSize)
+        self.draw(in: CGRect(origin: CGPoint.zero, size: toSize))
+        let resImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext();
+        return resImage
+    }
+    
+    
+    /// 压缩图片致指定像素
+    ///
+    /// - Parameter toPx: 像素
+    /// - Returns: 返回压缩后的图片
+    func rescaleImage(toPx: CGFloat) -> UIImage? {
+        if self.width <= toPx && self.height <= toPx {
+            return self
+        }
+        var newSize = self.size
+        let scale = self.width / self.height
+        if self.width > self.height {
+            newSize.width = toPx
+            newSize.height = toPx / scale
+        } else {
+            newSize.width = toPx * scale
+            newSize.height = toPx
+        }
+        return self.rescaleImage(toSize: newSize)
     }
     
 }
