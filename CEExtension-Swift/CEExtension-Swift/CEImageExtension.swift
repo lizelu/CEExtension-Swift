@@ -102,4 +102,43 @@ extension UIImage {
         return self.rescaleImage(toSize: newSize)
     }
     
+    func rotate(orientation: UIImageOrientation) -> UIImage? {
+        let imageRef = self.cgImage
+        let rect = CGRect(x: 0, y: 0, width: (imageRef?.width)!, height: (imageRef?.height)!)
+        var bounds = rect
+        var transform: CGAffineTransform = CGAffineTransform.identity
+        switch orientation {
+        case .up:
+            return self
+            
+        case .upMirrored:
+            transform = CGAffineTransform(scaleX: rect.size.width, y: 0)
+            transform = transform.scaledBy(x: -1, y: 1)
+        default:
+            return self
+        }
+        
+        UIGraphicsBeginImageContext(bounds.size)
+        let context = UIGraphicsGetCurrentContext()
+        context!.scaleBy(x: -1.0, y: 1.0);
+        
+        switch orientation {
+        case .left:
+            fallthrough
+        case .leftMirrored:
+            fallthrough
+        case .right:
+            fallthrough
+        case .rightMirrored:
+            context!.translateBy(x: -rect.size.height, y: 0.0);
+        default:
+            context!.translateBy(x: 0.0, y: -rect.size.height);
+        }
+        context!.concatenate(transform)
+        context!.draw(imageRef!, in: rect)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage
+    }
+    
 }
