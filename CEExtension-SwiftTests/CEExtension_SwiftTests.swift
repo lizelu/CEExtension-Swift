@@ -62,6 +62,11 @@ class CEExtension_SwiftTests: XCTestCase {
     func testViewExtension() {
         let testView = UIView(frame: CGRect(x: 10, y: 20, width: 60, height: 80))
         
+        testView.x = 15
+        testView.y = 15
+        testView.width = 65
+        testView.height = 85
+        
         print("x: \(testView.x)")
         print("y: \(testView.y)")
         print("width: \(testView.width)")
@@ -76,6 +81,14 @@ class CEExtension_SwiftTests: XCTestCase {
         print("middleHeight: \(testView.middleHeight)")
         print("size: \(testView.size)")
         print("origin: \(testView.origin)")
+    }
+    
+    func testImageExtenson() {
+        let img: UIImage = #imageLiteral(resourceName: "cat")
+        print("图片的原始大小：\(img.size)")
+        
+        let newImage = img.imageByScaling(imageSize: CGSize(width: 50, height: 50))
+        print("缩放后的图片大小：\(newImage?.size)")
         
     }
     
