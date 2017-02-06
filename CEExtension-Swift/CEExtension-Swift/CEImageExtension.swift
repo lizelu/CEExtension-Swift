@@ -8,6 +8,11 @@
 
 import UIKit
 extension UIImage {
+    
+    /// 图片等比缩放
+    ///
+    /// - Parameter imageSize: 要缩放的尺寸
+    /// - Returns: 返回缩放后的图片
     func imageByScaling(imageSize: CGSize) -> UIImage? {
         let sourceImageSize = self.size
         var scaleFactor : CGFloat = 0
@@ -38,4 +43,5 @@ extension UIImage {
         self.draw(in: thumbnailRect)
         return UIGraphicsGetImageFromCurrentImageContext()
     }
+    
 }

@@ -16,7 +16,7 @@ extension UIColor {
     ///   - green: G
     ///   - blue: B
     /// - Returns: 相应的颜色对象
-    func rgb(_ red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
+    class func rgb(red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
         return UIColor.init(red: red/255, green: green/255, blue: blue/255, alpha: 1)
     }
     
@@ -25,12 +25,12 @@ extension UIColor {
     ///
     /// - Parameter hex: 0x00ffad
     /// - Returns: 相应的颜色对象
-    func colorWithHex(_ hex: UInt) -> UIColor {
+    class func colorWithHex(hex: UInt) -> UIColor {
         let r: CGFloat = CGFloat((hex & 0xff0000) >> 16)
         let g: CGFloat = CGFloat((hex & 0x00ff00) >> 8)
         let b: CGFloat = CGFloat(hex & 0x0000ff)
         
-        return rgb(r, green: g, blue: b)
+        return rgb(red: r, green: g, blue: b)
     }
 
 }
