@@ -46,23 +46,45 @@ class ImageExtensionViewController: UIViewController {
     }
 
     @IBAction func tapCompressButton(_ sender: UIButton) {
-        let newImage = img?.rescaleImage(toSize: CGSize(width: 10, height: 10))
-        testImageView.image = newImage
+        testImageView.image = img?.rescaleImage(toSize: CGSize(width: 10, height: 10))
     }
     
     @IBAction func tapScalingImageButton(_ sender: UIButton) {
-        let newImage = img?.imageByScaling(imageSize: CGSize(width: 100, height: 100))
-        testImageView.image = newImage
+        testImageView.image = img?.imageByScaling(imageSize: CGSize(width: 100, height: 100))
     }
     
     @IBAction func tapPxSlider(_ sender: UISlider) {
-        let newImage = img?.rescaleImage(toPx: CGFloat(sender.value))
-        testImageView.image = newImage
+        testImageView.image = img?.rescaleImage(toPx: CGFloat(sender.value))
     }
     
-    @IBAction func tapRescaleImageToPxButton(_ sender: UIButton) {
-       
+    @IBAction func tapHorizontalButton(_ sender: UIButton) {
+        testImageView.image = testImageView.image?.flipHorizontal()
     }
+    
+    @IBAction func tapVerticalButton(_ sender: Any) {
+        testImageView.image = testImageView.image?.flipVertical()
+    }
+    
+    @IBAction func tapFlipDownButton(_ sender: Any) {
+        testImageView.image = testImageView.image?.flipDown()
+    }
+    
+    @IBAction func tapFlipLeftButton(_ sender: Any) {
+        testImageView.image = testImageView.image?.flipLeft()
+    }
+    
+    @IBAction func tapFlipRightButton(_ sender: Any) {
+        testImageView.image = testImageView.image?.flipRight()
+    }
+    
+    @IBAction func tapFlipLeftMirroredButton(_ sender: Any) {
+        testImageView.image = testImageView.image?.flipLeftMirrored()
+    }
+    
+    @IBAction func tapFlipRightMirroredButton(_ sender: Any) {
+        testImageView.image = testImageView.image?.flipRightMirrored()
+    }
+    
     
     @IBAction func tapWorHSlider(_ sender: UISlider) {
         let newImage = img?.subImage(rect: CGRect(x: 0, y: 0, width: CGFloat(widthSlider.value), height: CGFloat(heightSlider.value)))

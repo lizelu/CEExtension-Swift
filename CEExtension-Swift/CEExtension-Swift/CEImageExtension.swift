@@ -112,15 +112,42 @@ extension UIImage {
             return self
             
         case .upMirrored:
-            transform = CGAffineTransform(scaleX: rect.size.width, y: 0)
+            transform = CGAffineTransform(translationX: rect.size.width, y: 0)
             transform = transform.scaledBy(x: -1, y: 1)
-        default:
-            return self
+            
+        case .down:
+            transform = CGAffineTransform(translationX: rect.size.width, y: rect.size.height)
+            transform = transform.rotated(by: CGFloat(M_PI))
+            
+        case .downMirrored:
+            transform = CGAffineTransform(translationX: 0, y: rect.size.height)
+            transform = transform.scaledBy(x: 1, y: -1)
+            
+            
+        case .left:
+            swapWidthAndHeight(rect: &bounds)
+            transform = CGAffineTransform(translationX:0 , y: rect.size.width)
+            transform = transform.rotated(by: CGFloat(3 * M_PI / 2))
+            
+        case .leftMirrored:
+            swapWidthAndHeight(rect: &bounds)
+            transform = CGAffineTransform(translationX:rect.size.height , y: rect.size.width)
+            transform = transform.scaledBy(x: -1, y: 1)
+            transform = transform.rotated(by: CGFloat(3 * M_PI / 2))
+            
+        case .right:
+            swapWidthAndHeight(rect: &bounds)
+            transform = CGAffineTransform(translationX:rect.size.height , y: 0)
+            transform = transform.rotated(by: CGFloat(M_PI / 2))
+            
+        case .rightMirrored:
+            swapWidthAndHeight(rect: &bounds)
+            transform = transform.scaledBy(x: -1, y: 1)
+            transform = transform.rotated(by: CGFloat(M_PI / 2))
         }
         
         UIGraphicsBeginImageContext(bounds.size)
         let context = UIGraphicsGetCurrentContext()
-        context!.scaleBy(x: -1.0, y: 1.0);
         
         switch orientation {
         case .left:
@@ -130,8 +157,10 @@ extension UIImage {
         case .right:
             fallthrough
         case .rightMirrored:
+            context!.scaleBy(x: -1.0, y: 1.0);
             context!.translateBy(x: -rect.size.height, y: 0.0);
         default:
+            context!.scaleBy(x: 1.0, y: -1.0);
             context!.translateBy(x: 0.0, y: -rect.size.height);
         }
         context!.concatenate(transform)
@@ -139,6 +168,40 @@ extension UIImage {
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return newImage
+    }
+    
+    func flipHorizontal() -> UIImage? {
+        return self.rotate(orientation: .upMirrored)
+    }
+    
+    func flipVertical() -> UIImage? {
+        return self.rotate(orientation: .downMirrored)
+    }
+    
+    func flipDown() -> UIImage? {
+        return self.rotate(orientation: .down)
+    }
+    
+    func flipLeft() -> UIImage? {
+        return self.rotate(orientation: .left)
+    }
+    
+    func flipLeftMirrored() -> UIImage? {
+        return self.rotate(orientation: .leftMirrored)
+    }
+    
+    func flipRight() -> UIImage? {
+        return self.rotate(orientation: .right)
+    }
+    
+    func flipRightMirrored() -> UIImage? {
+        return self.rotate(orientation: .rightMirrored)
+    }
+    
+    func swapWidthAndHeight(rect: inout CGRect) {
+        let swap = rect.size.width
+        rect.size.width = rect.size.height
+        rect.size.height = swap
     }
     
 }
