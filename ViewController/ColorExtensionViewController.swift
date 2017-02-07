@@ -7,15 +7,22 @@
 //
 
 import UIKit
+enum RGBType: Int {
+    case red = 0
+    case green
+    case blue
+}
 
 class ColorExtensionViewController: UIViewController {
 
     @IBOutlet var colorTextField: UITextField!
     
-    @IBOutlet var colorSlider: UISlider!
+    @IBOutlet var redColorSlider: UISlider!
+    @IBOutlet var greenColorSlider: UISlider!
+    @IBOutlet var blueColorSlider: UISlider!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        changeSliderValue(redColorSlider)
         // Do any additional setup after loading the view.
     }
 
@@ -33,7 +40,11 @@ class ColorExtensionViewController: UIViewController {
     }
 
     @IBAction func changeSliderValue(_ sender: UISlider) {
-        let value = UInt32(sender.value)
+        let red = UInt32(redColorSlider.value) << 16
+        let green = UInt32(greenColorSlider.value) << 8
+        let blue = UInt32(blueColorSlider.value)
+        
+        let value = red + green + blue
         let hex = String(value,radix:16)
         self.colorTextField.text = "0x\(hex)"
         self.view.backgroundColor = UIColor.colorWithHex(hex: value)
