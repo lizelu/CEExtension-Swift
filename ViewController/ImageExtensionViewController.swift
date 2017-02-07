@@ -10,26 +10,44 @@ import UIKit
 
 class ImageExtensionViewController: UIViewController {
 
+    @IBOutlet var testImageView: UIImageView!
+    @IBOutlet var pxSlider: UISlider!
+    let img = UIImage(named: "001")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        pxSlider.minimumValue = 10
+        let imgWidth = Float((img?.width)!)
+        let imgHeight = Float((img?.height)!)
+        
+        pxSlider.maximumValue = imgWidth
+        if imgHeight > imgWidth {
+            pxSlider.maximumValue = imgHeight
+        }
+        pxSlider.value = pxSlider.maximumValue
     }
 
+    @IBAction func tapCompressButton(_ sender: UIButton) {
+        let newImage = img?.rescaleImage(toSize: CGSize(width: 10, height: 10))
+        testImageView.image = newImage
+    }
+    
+    @IBAction func tapScalingImageButton(_ sender: UIButton) {
+        let newImage = img?.imageByScaling(imageSize: CGSize(width: 100, height: 100))
+        testImageView.image = newImage
+    }
+    
+    @IBAction func tapPxSlider(_ sender: UISlider) {
+        let newImage = img?.rescaleImage(toPx: CGFloat(sender.value))
+        testImageView.image = newImage
+    }
+    @IBAction func tapRescaleImageToPxButton(_ sender: UIButton) {
+       
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

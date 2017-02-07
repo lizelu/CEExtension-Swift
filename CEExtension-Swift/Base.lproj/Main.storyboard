@@ -311,10 +311,10 @@
             </objects>
             <point key="canvasLocation" x="2249" y="-324"/>
         </scene>
-        <!--View Controller-->
+        <!--Image Extension View Controller-->
         <scene sceneID="4Dg-Li-y0b">
             <objects>
-                <viewController id="BsH-Wz-k9j" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ImageExtensionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BsH-Wz-k9j" customClass="ImageExtensionViewController" customModule="CEExtension_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2kN-BN-IaG"/>
                         <viewControllerLayoutGuide type="bottom" id="QvX-mK-rqW"/>
@@ -324,19 +324,89 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="001" translatesAutoresizingMaskIntoConstraints="NO" id="QcO-mb-ZRa">
-                                <rect key="frame" x="31" y="98" width="314" height="143"/>
+                                <rect key="frame" x="20" y="98" width="335" height="143"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="143" id="egM-CL-RsF"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W3k-WS-sko">
+                                <rect key="frame" x="20" y="269" width="335" height="128"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4uK-6J-76g">
+                                        <rect key="frame" x="0.0" y="8" width="80" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="OY6-20-iAM"/>
+                                            <constraint firstAttribute="width" constant="80" id="prK-Sh-b9l"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <state key="normal" title="压缩到指定尺寸"/>
+                                        <connections>
+                                            <action selector="tapCompressButton:" destination="BsH-Wz-k9j" eventType="touchUpInside" id="Dzj-W2-le2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0CH-e9-EEX">
+                                        <rect key="frame" x="92" y="8" width="55" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="RCh-My-dMl"/>
+                                            <constraint firstAttribute="width" constant="55" id="S6n-eZ-m5K"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <state key="normal" title="等比缩放"/>
+                                        <connections>
+                                            <action selector="tapScalingImageButton:" destination="BsH-Wz-k9j" eventType="touchUpInside" id="XIi-Ou-X0A"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zaw-7W-FOz">
+                                        <rect key="frame" x="0.0" y="42" width="55" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="RbO-ou-QrB"/>
+                                            <constraint firstAttribute="width" constant="55" id="kju-rh-M0D"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <state key="normal" title="指定像素"/>
+                                        <connections>
+                                            <action selector="tapRescaleImageToPxButton:" destination="BsH-Wz-k9j" eventType="touchUpInside" id="Bry-X9-XuZ"/>
+                                        </connections>
+                                    </button>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="MiW-sQ-7Gt">
+                                        <rect key="frame" x="59" y="42" width="258" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="7sf-MP-f75"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="tapPxSlider:" destination="BsH-Wz-k9j" eventType="valueChanged" id="9y6-Ox-AXE"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="CfS-w7-ARe"/>
+                                    <constraint firstItem="MiW-sQ-7Gt" firstAttribute="top" secondItem="0CH-e9-EEX" secondAttribute="bottom" constant="4" id="Dsq-iI-Zaq"/>
+                                    <constraint firstItem="4uK-6J-76g" firstAttribute="top" secondItem="W3k-WS-sko" secondAttribute="top" constant="8" id="HgU-H1-Rav"/>
+                                    <constraint firstItem="4uK-6J-76g" firstAttribute="leading" secondItem="W3k-WS-sko" secondAttribute="leading" id="PXP-w9-XaD"/>
+                                    <constraint firstItem="Zaw-7W-FOz" firstAttribute="leading" secondItem="W3k-WS-sko" secondAttribute="leading" id="ZVD-c8-tey"/>
+                                    <constraint firstItem="MiW-sQ-7Gt" firstAttribute="leading" secondItem="Zaw-7W-FOz" secondAttribute="trailing" constant="6" id="ajr-iD-Nqn"/>
+                                    <constraint firstItem="0CH-e9-EEX" firstAttribute="leading" secondItem="4uK-6J-76g" secondAttribute="trailing" constant="12" id="g4C-FC-ebo"/>
+                                    <constraint firstItem="Zaw-7W-FOz" firstAttribute="top" secondItem="4uK-6J-76g" secondAttribute="bottom" constant="4" id="kK3-VT-iKL"/>
+                                    <constraint firstItem="0CH-e9-EEX" firstAttribute="top" secondItem="W3k-WS-sko" secondAttribute="top" constant="8" id="z6w-In-WRd"/>
+                                    <constraint firstAttribute="trailing" secondItem="MiW-sQ-7Gt" secondAttribute="trailing" constant="20" id="zgA-h1-Ru0"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="W3k-WS-sko" firstAttribute="leading" secondItem="7GF-Ah-3G4" secondAttribute="leading" constant="20" id="0sg-Ot-0UO"/>
                             <constraint firstItem="QcO-mb-ZRa" firstAttribute="top" secondItem="2kN-BN-IaG" secondAttribute="bottom" constant="34" id="7Oc-UF-QAN"/>
-                            <constraint firstItem="QcO-mb-ZRa" firstAttribute="leading" secondItem="7GF-Ah-3G4" secondAttribute="leading" constant="31" id="OvP-mh-eHT"/>
-                            <constraint firstAttribute="trailing" secondItem="QcO-mb-ZRa" secondAttribute="trailing" constant="30" id="UrW-X4-s7t"/>
+                            <constraint firstItem="W3k-WS-sko" firstAttribute="top" secondItem="QcO-mb-ZRa" secondAttribute="bottom" constant="28" id="Cl2-3l-Qe9"/>
+                            <constraint firstItem="QcO-mb-ZRa" firstAttribute="leading" secondItem="7GF-Ah-3G4" secondAttribute="leading" constant="20" id="OvP-mh-eHT"/>
+                            <constraint firstAttribute="trailing" secondItem="QcO-mb-ZRa" secondAttribute="trailing" constant="20" id="UrW-X4-s7t"/>
+                            <constraint firstAttribute="trailing" secondItem="W3k-WS-sko" secondAttribute="trailing" constant="20" id="wTJ-Ns-vMI"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pxSlider" destination="MiW-sQ-7Gt" id="TIY-A6-T6U"/>
+                        <outlet property="testImageView" destination="QcO-mb-ZRa" id="mr8-2X-uwW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sXZ-yU-XiL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
