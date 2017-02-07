@@ -7,8 +7,8 @@
 //
 
 import UIKit
+
 extension UIColor {
-    
     /// 通过浮点数字来设置颜色
     ///
     /// - Parameters:
@@ -17,9 +17,8 @@ extension UIColor {
     ///   - blue: B
     /// - Returns: 相应的颜色对象
     class func rgb(red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
-        return UIColor.init(red: red/255, green: green/255, blue: blue/255, alpha: 1)
+        return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: 1)
     }
-    
     
     /// 通过16进制设置颜色
     ///
@@ -33,4 +32,5 @@ extension UIColor {
         return rgb(red: r, green: g, blue: b)
     }
 
+    
 }

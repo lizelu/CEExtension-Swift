@@ -81,7 +81,6 @@ extension UIImage {
         return resImage
     }
     
-    
     /// 压缩图片致指定像素
     ///
     /// - Parameter toPx: 像素
@@ -102,11 +101,65 @@ extension UIImage {
         return self.rescaleImage(toSize: newSize)
     }
     
-    func rotate(orientation: UIImageOrientation) -> UIImage? {
+    /// 水平翻转
+    ///
+    /// - Returns: 返回水平翻转的图片
+    func flipHorizontal() -> UIImage? {
+        return self.rotate(orientation: .upMirrored)
+    }
+    
+    /// 垂直翻转
+    ///
+    /// - Returns: 返回垂直翻转的图片
+    func flipVertical() -> UIImage? {
+        return self.rotate(orientation: .downMirrored)
+    }
+    
+    /// 向下翻转
+    ///
+    /// - Returns: <#return value description#>
+    func flipDown() -> UIImage? {
+        return self.rotate(orientation: .down)
+    }
+    
+    /// 向左翻转
+    ///
+    /// - Returns: <#return value description#>
+    func flipLeft() -> UIImage? {
+        return self.rotate(orientation: .left)
+    }
+    
+    /// 镜像向左翻转
+    ///
+    /// - Returns: <#return value description#>
+    func flipLeftMirrored() -> UIImage? {
+        return self.rotate(orientation: .leftMirrored)
+    }
+    
+    /// 向右翻转
+    ///
+    /// - Returns: <#return value description#>
+    func flipRight() -> UIImage? {
+        return self.rotate(orientation: .right)
+    }
+    
+    /// 镜像向右翻转
+    ///
+    /// - Returns: <#return value description#>
+    func flipRightMirrored() -> UIImage? {
+        return self.rotate(orientation: .rightMirrored)
+    }
+    
+    /// 图片翻转
+    ///
+    /// - Parameter orientation: 翻转类型
+    /// - Returns: 翻转后的图片
+    private func rotate(orientation: UIImageOrientation) -> UIImage? {
         let imageRef = self.cgImage
         let rect = CGRect(x: 0, y: 0, width: (imageRef?.width)!, height: (imageRef?.height)!)
         var bounds = rect
         var transform: CGAffineTransform = CGAffineTransform.identity
+        
         switch orientation {
         case .up:
             return self
@@ -169,39 +222,13 @@ extension UIImage {
         UIGraphicsEndImageContext()
         return newImage
     }
+
     
-    func flipHorizontal() -> UIImage? {
-        return self.rotate(orientation: .upMirrored)
-    }
-    
-    func flipVertical() -> UIImage? {
-        return self.rotate(orientation: .downMirrored)
-    }
-    
-    func flipDown() -> UIImage? {
-        return self.rotate(orientation: .down)
-    }
-    
-    func flipLeft() -> UIImage? {
-        return self.rotate(orientation: .left)
-    }
-    
-    func flipLeftMirrored() -> UIImage? {
-        return self.rotate(orientation: .leftMirrored)
-    }
-    
-    func flipRight() -> UIImage? {
-        return self.rotate(orientation: .right)
-    }
-    
-    func flipRightMirrored() -> UIImage? {
-        return self.rotate(orientation: .rightMirrored)
-    }
-    
-    func swapWidthAndHeight(rect: inout CGRect) {
+    private func swapWidthAndHeight(rect: inout CGRect) {
         let swap = rect.size.width
         rect.size.width = rect.size.height
         rect.size.height = swap
     }
+    
     
 }
