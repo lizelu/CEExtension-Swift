@@ -21,6 +21,8 @@
 		F44042C01E486B920021C4D6 /* CEStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44042BE1E486B920021C4D6 /* CEStringExtension.swift */; };
 		F44042C21E4871D90021C4D6 /* DeviceExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44042C11E4871D90021C4D6 /* DeviceExtensionViewController.swift */; };
 		F44042C31E4871D90021C4D6 /* DeviceExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44042C11E4871D90021C4D6 /* DeviceExtensionViewController.swift */; };
+		F44042C51E487A190021C4D6 /* ViewExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44042C41E487A190021C4D6 /* ViewExtensionViewController.swift */; };
+		F44042C61E487A190021C4D6 /* ViewExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44042C41E487A190021C4D6 /* ViewExtensionViewController.swift */; };
 		F4865F301E31BC1200BB72AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4865F2F1E31BC1200BB72AA /* AppDelegate.swift */; };
 		F4865F351E31BC1200BB72AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4865F331E31BC1200BB72AA /* Main.storyboard */; };
 		F4865F371E31BC1200BB72AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4865F361E31BC1200BB72AA /* Assets.xcassets */; };
@@ -58,6 +60,7 @@
 		F44042BB1E48672D0021C4D6 /* ColorExtensionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtensionViewController.swift; sourceTree = "<group>"; };
 		F44042BE1E486B920021C4D6 /* CEStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CEStringExtension.swift; sourceTree = "<group>"; };
 		F44042C11E4871D90021C4D6 /* DeviceExtensionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceExtensionViewController.swift; sourceTree = "<group>"; };
+		F44042C41E487A190021C4D6 /* ViewExtensionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtensionViewController.swift; sourceTree = "<group>"; };
 		F4865F2C1E31BC1200BB72AA /* CEExtension-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CEExtension-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4865F2F1E31BC1200BB72AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4865F341E31BC1200BB72AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -121,6 +124,7 @@
 			children = (
 				F44042BB1E48672D0021C4D6 /* ColorExtensionViewController.swift */,
 				F44042C11E4871D90021C4D6 /* DeviceExtensionViewController.swift */,
+				F44042C41E487A190021C4D6 /* ViewExtensionViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = SOURCE_ROOT;
@@ -282,6 +286,7 @@
 				F44042B61E48142B0021C4D6 /* CEImageExtension.swift in Sources */,
 				F44042B31E48142B0021C4D6 /* CEBundleExtentsion.swift in Sources */,
 				F44042BD1E48672D0021C4D6 /* ColorExtensionViewController.swift in Sources */,
+				F44042C61E487A190021C4D6 /* ViewExtensionViewController.swift in Sources */,
 				F44042A41E4812B00021C4D6 /* CEExtension_SwiftTests.swift in Sources */,
 				F44042C01E486B920021C4D6 /* CEStringExtension.swift in Sources */,
 				F44042B41E48142B0021C4D6 /* CEColoreExtension.swift in Sources */,
@@ -300,6 +305,7 @@
 				F4865F4F1E3215B700BB72AA /* CEImageExtension.swift in Sources */,
 				F4865F4D1E3207BD00BB72AA /* CENavigationBarExtension.swift in Sources */,
 				F44042BC1E48672D0021C4D6 /* ColorExtensionViewController.swift in Sources */,
+				F44042C51E487A190021C4D6 /* ViewExtensionViewController.swift in Sources */,
 				F4865F471E31F44F00BB72AA /* CEScreenExtension.swift in Sources */,
 				F44042BF1E486B920021C4D6 /* CEStringExtension.swift in Sources */,
 				F4865F431E31EAA700BB72AA /* CEColoreExtension.swift in Sources */,

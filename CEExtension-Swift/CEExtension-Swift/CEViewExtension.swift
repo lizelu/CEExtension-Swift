@@ -66,20 +66,15 @@ extension UIView {
         get {
             return x
         }
-        
-        set(value) {
-            x = value
-        }
     }
     
     /// 右
     var right : CGFloat {
         get {
-            return x + width
-        }
-        
-        set(value) {
-            x = value - width
+            guard self.superview != nil else {
+                 return x + width
+            }
+            return (superview?.width)! - (x + width)
         }
     }
     
@@ -88,20 +83,15 @@ extension UIView {
         get {
             return y
         }
-        
-        set(value) {
-            y = value
-        }
     }
     
     /// 下
     var bottom : CGFloat {
         get {
-            return y + height
-        }
-        
-        set(value) {
-            y = value - height
+            guard self.superview != nil else {
+                return y + height
+            }
+            return (superview?.height)! - (y + height)
         }
     }
     
