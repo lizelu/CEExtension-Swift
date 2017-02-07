@@ -9,7 +9,6 @@
 import UIKit
 var CECustomViewKey = "CECustomViewKey"
 extension UINavigationBar {
-    
     ///通过Runtime的属性关联添加自定义View
     var customView : UIView? {
         get {
@@ -21,10 +20,10 @@ extension UINavigationBar {
         }
     }
     
-    /// 改变NavigationBar的颜色
+    /// 改变StateBar的颜色
     ///
     /// - Parameter backgroundColor: <#backgroundColor description#>
-    func changeBackgroundColor(_ backgroundColor:UIColor) {
+    func changeStateBarBackgroundColor(_ backgroundColor:UIColor) {
         if self.customView == nil {
             self.setBackgroundImage(UIImage(), for: .default)
             self.shadowImage = UIImage()

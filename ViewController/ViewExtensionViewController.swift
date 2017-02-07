@@ -14,7 +14,9 @@ class ViewExtensionViewController: UIViewController {
     @IBOutlet var subViewXLabel: UILabel!
     @IBOutlet var subViewRightLabel: UILabel!
     @IBOutlet var subViewBottomLabel: UILabel!
+    @IBOutlet var centerLabel: UILabel!
     
+    @IBOutlet var currentVCLabel: UILabel!
     @IBOutlet var subView: UIView!
     
     override func viewDidLoad() {
@@ -25,6 +27,9 @@ class ViewExtensionViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.updateLabels()
+        
+        //获取子视图所在的VC
+        self.currentVCLabel.text = String(describing: type(of: subView.currentViewController!))
     }
     
     func updateLabels() {
@@ -32,6 +37,7 @@ class ViewExtensionViewController: UIViewController {
         self.subViewYLable.text = "\(subView.y)"
         self.subViewRightLabel.text = "\(subView.right)"
         self.subViewBottomLabel.text = "\(subView.bottom)"
+        self.centerLabel.text = "\(subView.centerX, subView.centerY)"
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
