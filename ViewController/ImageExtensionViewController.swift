@@ -1,18 +1,15 @@
 //
-//  ColorExtensionViewController.swift
+//  ImageExtensionViewController.swift
 //  CEExtension-Swift
 //
-//  Created by Mr.LuDashi on 2017/2/6.
+//  Created by Mr.LuDashi on 2017/2/7.
 //  Copyright © 2017年 ZeluLi. All rights reserved.
 //
 
 import UIKit
 
-class ColorExtensionViewController: UIViewController {
+class ImageExtensionViewController: UIViewController {
 
-    @IBOutlet var colorTextField: UITextField!
-    
-    @IBOutlet var colorSlider: UISlider!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,20 +21,7 @@ class ColorExtensionViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func tapButton(_ sender: UIButton) {
-        guard let colorStr: String = colorTextField.text else {
-            return
-        }
-        
-        self.view.backgroundColor = UIColor.colorWithHex(hex: colorStr.intFormHex)
-    }
 
-    @IBAction func changeSliderValue(_ sender: UISlider) {
-        let value = UInt32(sender.value)
-        let hex = String(value,radix:16)
-        self.colorTextField.text = "0x\(hex)"
-        self.view.backgroundColor = UIColor.colorWithHex(hex: value)
-    }
     /*
     // MARK: - Navigation
 

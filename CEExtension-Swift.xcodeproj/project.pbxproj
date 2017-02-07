@@ -25,6 +25,8 @@
 		F44042C61E487A190021C4D6 /* ViewExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44042C41E487A190021C4D6 /* ViewExtensionViewController.swift */; };
 		F44042C81E4960CA0021C4D6 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44042C71E4960CA0021C4D6 /* MenuTableViewController.swift */; };
 		F44042C91E4960CA0021C4D6 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44042C71E4960CA0021C4D6 /* MenuTableViewController.swift */; };
+		F44042CB1E496B010021C4D6 /* ImageExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44042CA1E496B010021C4D6 /* ImageExtensionViewController.swift */; };
+		F44042CC1E496B010021C4D6 /* ImageExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44042CA1E496B010021C4D6 /* ImageExtensionViewController.swift */; };
 		F4865F301E31BC1200BB72AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4865F2F1E31BC1200BB72AA /* AppDelegate.swift */; };
 		F4865F351E31BC1200BB72AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4865F331E31BC1200BB72AA /* Main.storyboard */; };
 		F4865F371E31BC1200BB72AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4865F361E31BC1200BB72AA /* Assets.xcassets */; };
@@ -64,6 +66,7 @@
 		F44042C11E4871D90021C4D6 /* DeviceExtensionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceExtensionViewController.swift; sourceTree = "<group>"; };
 		F44042C41E487A190021C4D6 /* ViewExtensionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtensionViewController.swift; sourceTree = "<group>"; };
 		F44042C71E4960CA0021C4D6 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		F44042CA1E496B010021C4D6 /* ImageExtensionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageExtensionViewController.swift; sourceTree = "<group>"; };
 		F4865F2C1E31BC1200BB72AA /* CEExtension-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CEExtension-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4865F2F1E31BC1200BB72AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4865F341E31BC1200BB72AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -129,6 +132,7 @@
 				F44042BB1E48672D0021C4D6 /* ColorExtensionViewController.swift */,
 				F44042C11E4871D90021C4D6 /* DeviceExtensionViewController.swift */,
 				F44042C41E487A190021C4D6 /* ViewExtensionViewController.swift */,
+				F44042CA1E496B010021C4D6 /* ImageExtensionViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = SOURCE_ROOT;
@@ -285,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F44042CC1E496B010021C4D6 /* ImageExtensionViewController.swift in Sources */,
 				F44042B91E48142B0021C4D6 /* CEViewExtension.swift in Sources */,
 				F44042B81E48142B0021C4D6 /* CEScreenExtension.swift in Sources */,
 				F44042C91E4960CA0021C4D6 /* MenuTableViewController.swift in Sources */,
@@ -305,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F44042CB1E496B010021C4D6 /* ImageExtensionViewController.swift in Sources */,
 				F4865F4B1E3205E700BB72AA /* CEViewExtension.swift in Sources */,
 				F4865F301E31BC1200BB72AA /* AppDelegate.swift in Sources */,
 				F44042C81E4960CA0021C4D6 /* MenuTableViewController.swift in Sources */,
