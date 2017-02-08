@@ -150,43 +150,74 @@ extension UIImage {
         return self.rotate(orientation: .rightMirrored)
     }
     
+    /// 图片旋转
+    ///
+    /// - Parameter radians: 弧度 0 -- 2PI
+    /// - Returns: 旋转后的图片
+    func imageRotated(radians: CGFloat) -> UIImage? {
+        let rotateViewBox = UIView(frame: CGRect(origin: CGPoint.zero, size: self.size))
+        let transform: CGAffineTransform = CGAffineTransform(rotationAngle: radians)
+        rotateViewBox.transform = transform
+        
+        UIGraphicsBeginImageContext(rotateViewBox.size)
+        let context = UIGraphicsGetCurrentContext()
+        context?.translateBy(x: rotateViewBox.width/2, y: rotateViewBox.height/2)
+        context?.rotate(by: radians)
+        context?.scaleBy(x: 1, y: -1)
+        let rect = CGRect(x: -self.width/2, y: -self.height/2, width: self.width, height: self.height)
+        context?.draw(self.cgImage!, in: rect)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage
+    }
+    
+    /// 图片旋转
+    ///
+    /// - Parameter radians: 角度 0 -- 360
+    /// - Returns: 旋转后的图片
+    func imageRotated(degree: CGFloat) -> UIImage? {
+        let radians = Double(degree) / 180 * M_PI
+        return self.imageRotated(radians: CGFloat(radians))
+    }
+    
     /// 图片翻转
     ///
     /// - Parameter orientation: 翻转类型
     /// - Returns: 翻转后的图片
     private func rotate(orientation: UIImageOrientation) -> UIImage? {
+        
         let imageRef = self.cgImage
         let rect = CGRect(x: 0, y: 0, width: (imageRef?.width)!, height: (imageRef?.height)!)
         var bounds = rect
         var transform: CGAffineTransform = CGAffineTransform.identity
         
         switch orientation {
+            
         case .up:
             return self
             
         case .upMirrored:
-            transform = CGAffineTransform(translationX: rect.size.width, y: 0)
-            transform = transform.scaledBy(x: -1, y: 1)
+            transform = CGAffineTransform(translationX: rect.size.width, y: 0)  //图片左平移width个像素
+            transform = transform.scaledBy(x: -1, y: 1)                         //缩放
             
         case .down:
             transform = CGAffineTransform(translationX: rect.size.width, y: rect.size.height)
-            transform = transform.rotated(by: CGFloat(M_PI))
+            transform = transform.rotated(by: CGFloat(M_PI))    //逆时针旋转
             
         case .downMirrored:
             transform = CGAffineTransform(translationX: 0, y: rect.size.height)
             transform = transform.scaledBy(x: 1, y: -1)
             
-            
         case .left:
             swapWidthAndHeight(rect: &bounds)
             transform = CGAffineTransform(translationX:0 , y: rect.size.width)
-            transform = transform.rotated(by: CGFloat(3 * M_PI / 2))
+            transform = transform.rotated(by: CGFloat( M_PI * 1.5))
             
         case .leftMirrored:
             swapWidthAndHeight(rect: &bounds)
             transform = CGAffineTransform(translationX:rect.size.height , y: rect.size.width)
             transform = transform.scaledBy(x: -1, y: 1)
-            transform = transform.rotated(by: CGFloat(3 * M_PI / 2))
+            transform = transform.rotated(by: CGFloat(M_PI * 1.5))
             
         case .right:
             swapWidthAndHeight(rect: &bounds)
@@ -202,6 +233,7 @@ extension UIImage {
         UIGraphicsBeginImageContext(bounds.size)
         let context = UIGraphicsGetCurrentContext()
         
+        //图片绘制时进行图片修正
         switch orientation {
         case .left:
             fallthrough
@@ -211,7 +243,7 @@ extension UIImage {
             fallthrough
         case .rightMirrored:
             context!.scaleBy(x: -1.0, y: 1.0);
-            context!.translateBy(x: -rect.size.height, y: 0.0);
+            context!.translateBy(x: -bounds.size.width, y: 0.0);
         default:
             context!.scaleBy(x: 1.0, y: -1.0);
             context!.translateBy(x: 0.0, y: -rect.size.height);
@@ -224,6 +256,9 @@ extension UIImage {
     }
 
     
+    /// 交换宽高
+    ///
+    /// - Parameter rect: <#rect description#>
     private func swapWidthAndHeight(rect: inout CGRect) {
         let swap = rect.size.width
         rect.size.width = rect.size.height

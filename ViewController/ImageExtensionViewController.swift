@@ -14,6 +14,7 @@ class ImageExtensionViewController: UIViewController {
     @IBOutlet var pxSlider: UISlider!
     @IBOutlet var widthSlider: UISlider!
     @IBOutlet var heightSlider: UISlider!
+    @IBOutlet var rotateSlider: UISlider!
     
     let img = UIImage(named: "001")
     
@@ -21,6 +22,7 @@ class ImageExtensionViewController: UIViewController {
         super.viewDidLoad()
         self.configPxSlider()
         self.configWorHSlider()
+        self.configRotateSlider()
     }
     
     func configPxSlider() {
@@ -44,6 +46,15 @@ class ImageExtensionViewController: UIViewController {
         heightSlider.maximumValue = Float((img?.height)!)
         heightSlider.value = Float((img?.height)!)
     }
+    
+    func configRotateSlider() {
+        rotateSlider.minimumValue = 0
+        rotateSlider.minimumValue = 0
+        rotateSlider.maximumValue = 360
+
+        rotateSlider.value = 0
+    }
+
 
     @IBAction func tapCompressButton(_ sender: UIButton) {
         testImageView.image = img?.rescaleImage(toSize: CGSize(width: 10, height: 10))
@@ -90,6 +101,10 @@ class ImageExtensionViewController: UIViewController {
         let newImage = img?.subImage(rect: CGRect(x: 0, y: 0, width: CGFloat(widthSlider.value), height: CGFloat(heightSlider.value)))
         testImageView.image = newImage
         
+    }
+    
+    @IBAction func changeRotateSlider(_ sender: UISlider) {
+        testImageView.image = img?.imageRotated(degree: CGFloat(rotateSlider.value))
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
