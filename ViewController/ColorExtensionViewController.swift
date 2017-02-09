@@ -49,6 +49,10 @@ class ColorExtensionViewController: UIViewController {
         self.colorTextField.text = "0x\(hex)"
         self.view.backgroundColor = UIColor.colorWithHex(hex: value)
     }
+    
+    @IBAction func tapGesturRecongnizer(_ sender: Any) {
+        self.view.endEditing(true)
+    }
     /*
     // MARK: - Navigation
 

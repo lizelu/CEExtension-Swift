@@ -22,6 +22,19 @@ extension UIImage {
         }
     }
 
+    /// 从将View转换成图片
+    ///
+    /// - Parameter view: <#view description#>
+    /// - Returns: <#return value description#>
+    class func imageFromView(view: UIView) -> UIImage? {
+        let scale = UIScreen.main.scale
+        UIGraphicsBeginImageContextWithOptions(view.size, false, scale)
+        view.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let viewImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return viewImage
+    }
+
     
     /// 图片等比缩放
     ///
@@ -178,6 +191,22 @@ extension UIImage {
     func imageRotated(degree: CGFloat) -> UIImage? {
         let radians = Double(degree) / 180 * M_PI
         return self.imageRotated(radians: CGFloat(radians))
+    }
+    
+    /// 图片平铺
+    ///
+    /// - Parameter size: 平铺区域的大小
+    /// - Returns: <#return value description#>
+    func imageTile(size: CGSize) -> UIImage? {
+        let tempView = UIView(frame: CGRect(origin: CGPoint.zero, size: size))
+        tempView.backgroundColor = UIColor(patternImage: self)
+        
+        UIGraphicsBeginImageContext(size)
+        tempView.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let bgImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return bgImage
     }
     
     /// 图片翻转

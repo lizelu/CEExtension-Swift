@@ -392,7 +392,7 @@
                                             <action selector="tapFlipDownButton:" destination="BsH-Wz-k9j" eventType="touchUpInside" id="02g-Hj-x7z"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqm-1J-XP1">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqm-1J-XP1">
                                         <rect key="frame" x="0.0" y="40" width="55" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="55" id="7uE-fh-YBM"/>
@@ -429,7 +429,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pz6-BB-qM6">
-                                        <rect key="frame" x="0.0" y="92" width="46" height="30"/>
+                                        <rect key="frame" x="0.0" y="108" width="46" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="5Ly-yP-zFI"/>
                                             <constraint firstAttribute="width" constant="46" id="Nzl-p3-jXD"/>
@@ -438,7 +438,7 @@
                                         <state key="normal" title="指定像素"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2CO-gB-Esw">
-                                        <rect key="frame" x="0.0" y="145" width="46" height="30"/>
+                                        <rect key="frame" x="0.0" y="161" width="46" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="46" id="VIH-5F-Ekh"/>
                                             <constraint firstAttribute="height" constant="30" id="b4N-AT-jwy"/>
@@ -447,7 +447,7 @@
                                         <state key="normal" title="截取图像"/>
                                     </button>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="MiW-sQ-7Gt">
-                                        <rect key="frame" x="52" y="92" width="265" height="31"/>
+                                        <rect key="frame" x="52" y="108" width="265" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="7sf-MP-f75"/>
                                         </constraints>
@@ -455,8 +455,26 @@
                                             <action selector="tapPxSlider:" destination="BsH-Wz-k9j" eventType="valueChanged" id="9y6-Ox-AXE"/>
                                         </connections>
                                     </slider>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWT-S1-jEM">
+                                        <rect key="frame" x="0.0" y="215" width="46" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="Dj3-EC-RNp"/>
+                                            <constraint firstAttribute="height" constant="30" id="law-II-BDs"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <state key="normal" title="旋转图像"/>
+                                    </button>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ray-Uv-POb">
+                                        <rect key="frame" x="52" y="216" width="265" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="IbX-0P-KMo"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="changeRotateSlider:" destination="BsH-Wz-k9j" eventType="valueChanged" id="TcV-wi-fOR"/>
+                                        </connections>
+                                    </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="width" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CkP-3w-AW4">
-                                        <rect key="frame" x="54" y="134" width="34" height="21"/>
+                                        <rect key="frame" x="54" y="150" width="34" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="34" id="IKL-75-twx"/>
                                             <constraint firstAttribute="height" constant="21" id="zkY-R6-bhz"/>
@@ -466,7 +484,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXK-Qu-8Ba">
-                                        <rect key="frame" x="54" y="167" width="34" height="21"/>
+                                        <rect key="frame" x="54" y="183" width="34" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="bMZ-Ze-NY5"/>
                                             <constraint firstAttribute="width" constant="34" id="cuG-bp-mbB"/>
@@ -476,7 +494,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="coP-aa-xZ6">
-                                        <rect key="frame" x="94" y="129" width="223" height="31"/>
+                                        <rect key="frame" x="94" y="145" width="223" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="T5a-ke-GHU"/>
                                         </constraints>
@@ -485,7 +503,7 @@
                                         </connections>
                                     </slider>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="UUb-Kl-oPB">
-                                        <rect key="frame" x="94" y="161" width="223" height="31"/>
+                                        <rect key="frame" x="94" y="177" width="223" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="JJo-dF-WfZ"/>
                                         </constraints>
@@ -505,24 +523,30 @@
                                             <action selector="tapFlipRightMirroredButton:" destination="BsH-Wz-k9j" eventType="touchUpInside" id="6xX-vV-BVS"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWT-S1-jEM">
-                                        <rect key="frame" x="0.0" y="199" width="46" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Caq-dq-HEt">
+                                        <rect key="frame" x="0.0" y="72" width="49" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="46" id="Dj3-EC-RNp"/>
-                                            <constraint firstAttribute="height" constant="30" id="law-II-BDs"/>
+                                            <constraint firstAttribute="width" constant="49" id="8ie-WD-iRF"/>
+                                            <constraint firstAttribute="height" constant="30" id="w7S-FO-AU8"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <state key="normal" title="旋转图像"/>
-                                    </button>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ray-Uv-POb">
-                                        <rect key="frame" x="52" y="200" width="265" height="31"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="IbX-0P-KMo"/>
-                                        </constraints>
+                                        <state key="normal" title="平铺图片"/>
                                         <connections>
-                                            <action selector="changeRotateSlider:" destination="BsH-Wz-k9j" eventType="valueChanged" id="TcV-wi-fOR"/>
+                                            <action selector="tapImageTileButton:" destination="BsH-Wz-k9j" eventType="touchUpInside" id="xwV-ba-pok"/>
                                         </connections>
-                                    </slider>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DD4-1F-mZs">
+                                        <rect key="frame" x="64" y="72" width="69" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="BkK-77-yNY"/>
+                                            <constraint firstAttribute="width" constant="69" id="ohS-bL-tLb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <state key="normal" title="view生成图片"/>
+                                        <connections>
+                                            <action selector="tapImageFromViewButton:" destination="BsH-Wz-k9j" eventType="touchUpInside" id="hua-mS-J7p"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -535,7 +559,7 @@
                                     <constraint firstItem="Ray-Uv-POb" firstAttribute="leading" secondItem="aWT-S1-jEM" secondAttribute="trailing" constant="8" id="6j1-wj-5YO"/>
                                     <constraint firstItem="JYF-Jh-vcE" firstAttribute="leading" secondItem="RAP-ix-ewq" secondAttribute="trailing" constant="18" id="8rY-Vv-RvN"/>
                                     <constraint firstItem="RAP-ix-ewq" firstAttribute="leading" secondItem="5zi-HL-EA0" secondAttribute="trailing" constant="8" id="9mL-i2-K9A"/>
-                                    <constraint firstItem="MiW-sQ-7Gt" firstAttribute="top" secondItem="0CH-e9-EEX" secondAttribute="bottom" constant="54" id="Dsq-iI-Zaq"/>
+                                    <constraint firstItem="MiW-sQ-7Gt" firstAttribute="top" secondItem="0CH-e9-EEX" secondAttribute="bottom" constant="70" id="Dsq-iI-Zaq"/>
                                     <constraint firstItem="MiW-sQ-7Gt" firstAttribute="leading" secondItem="pz6-BB-qM6" secondAttribute="trailing" constant="8" id="Fh3-eN-lxC"/>
                                     <constraint firstItem="5zi-HL-EA0" firstAttribute="leading" secondItem="fqm-1J-XP1" secondAttribute="trailing" constant="8" id="FuT-To-jIB"/>
                                     <constraint firstItem="4uK-6J-76g" firstAttribute="top" secondItem="W3k-WS-sko" secondAttribute="top" constant="8" id="HgU-H1-Rav"/>
@@ -548,19 +572,23 @@
                                     <constraint firstItem="2CO-gB-Esw" firstAttribute="leading" secondItem="W3k-WS-sko" secondAttribute="leading" id="SEl-Ew-BKL"/>
                                     <constraint firstItem="5bx-dy-Yqp" firstAttribute="leading" secondItem="cFf-AM-3Eq" secondAttribute="trailing" constant="3" id="TEr-1a-WXF"/>
                                     <constraint firstItem="kXK-Qu-8Ba" firstAttribute="leading" secondItem="2CO-gB-Esw" secondAttribute="trailing" constant="8" id="Uaf-9g-FqM"/>
+                                    <constraint firstItem="DD4-1F-mZs" firstAttribute="top" secondItem="RAP-ix-ewq" secondAttribute="bottom" constant="2" id="V0f-ei-6cA"/>
                                     <constraint firstItem="RAP-ix-ewq" firstAttribute="top" secondItem="Zaw-7W-FOz" secondAttribute="bottom" constant="2" id="VqF-Wd-bhN"/>
+                                    <constraint firstItem="Caq-dq-HEt" firstAttribute="leading" secondItem="W3k-WS-sko" secondAttribute="leading" id="YWQ-bV-zQn"/>
                                     <constraint firstItem="Zaw-7W-FOz" firstAttribute="leading" secondItem="0CH-e9-EEX" secondAttribute="trailing" constant="8" id="cSd-mA-fcq"/>
                                     <constraint firstItem="cFf-AM-3Eq" firstAttribute="leading" secondItem="Zaw-7W-FOz" secondAttribute="trailing" constant="9" id="eyW-k3-v9L"/>
                                     <constraint firstItem="0CH-e9-EEX" firstAttribute="leading" secondItem="4uK-6J-76g" secondAttribute="trailing" constant="12" id="g4C-FC-ebo"/>
                                     <constraint firstItem="aWT-S1-jEM" firstAttribute="leading" secondItem="W3k-WS-sko" secondAttribute="leading" id="hmb-Xo-9yk"/>
                                     <constraint firstItem="5bx-dy-Yqp" firstAttribute="top" secondItem="W3k-WS-sko" secondAttribute="top" constant="8" id="jRV-6E-2Qo"/>
                                     <constraint firstItem="coP-aa-xZ6" firstAttribute="top" secondItem="MiW-sQ-7Gt" secondAttribute="bottom" constant="7" id="kRk-vi-SDm"/>
+                                    <constraint firstItem="DD4-1F-mZs" firstAttribute="leading" secondItem="Caq-dq-HEt" secondAttribute="trailing" constant="15" id="lly-IM-SMm"/>
                                     <constraint firstItem="fqm-1J-XP1" firstAttribute="top" secondItem="4uK-6J-76g" secondAttribute="bottom" constant="2" id="nhN-CM-j0r"/>
                                     <constraint firstAttribute="trailing" secondItem="UUb-Kl-oPB" secondAttribute="trailing" constant="20" id="oi4-QU-ATT"/>
                                     <constraint firstItem="CkP-3w-AW4" firstAttribute="top" secondItem="MiW-sQ-7Gt" secondAttribute="bottom" constant="12" id="p6t-kp-2fA"/>
+                                    <constraint firstItem="Caq-dq-HEt" firstAttribute="top" secondItem="5zi-HL-EA0" secondAttribute="bottom" constant="2" id="q2i-aw-RHr"/>
                                     <constraint firstItem="Ray-Uv-POb" firstAttribute="top" secondItem="UUb-Kl-oPB" secondAttribute="bottom" constant="9" id="sdS-Nb-bW4"/>
                                     <constraint firstItem="cFf-AM-3Eq" firstAttribute="top" secondItem="W3k-WS-sko" secondAttribute="top" constant="8" id="w7k-xf-Y9i"/>
-                                    <constraint firstItem="pz6-BB-qM6" firstAttribute="top" secondItem="4uK-6J-76g" secondAttribute="bottom" constant="54" id="wlE-ZV-yRH"/>
+                                    <constraint firstItem="pz6-BB-qM6" firstAttribute="top" secondItem="4uK-6J-76g" secondAttribute="bottom" constant="70" id="wlE-ZV-yRH"/>
                                     <constraint firstItem="coP-aa-xZ6" firstAttribute="leading" secondItem="CkP-3w-AW4" secondAttribute="trailing" constant="8" id="x37-qt-Pe9"/>
                                     <constraint firstItem="2CO-gB-Esw" firstAttribute="top" secondItem="pz6-BB-qM6" secondAttribute="bottom" constant="23" id="x96-Tn-D4h"/>
                                     <constraint firstItem="0CH-e9-EEX" firstAttribute="top" secondItem="W3k-WS-sko" secondAttribute="top" constant="8" id="z6w-In-WRd"/>
@@ -798,6 +826,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.62352941176470589" green="0.78431372549019607" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="qIf-Ot-Ys4" firstAttribute="top" secondItem="hK9-a5-hBG" secondAttribute="bottom" constant="8" id="0gG-tM-B7u"/>
                             <constraint firstItem="x81-Pv-Zz7" firstAttribute="leading" secondItem="PHt-hc-RFF" secondAttribute="leadingMargin" id="1xz-N6-08e"/>
@@ -814,6 +843,9 @@
                             <constraint firstAttribute="trailing" secondItem="2Au-sq-Iie" secondAttribute="trailing" constant="16" id="zEE-Qz-FIV"/>
                             <constraint firstItem="hK9-a5-hBG" firstAttribute="trailing" secondItem="PHt-hc-RFF" secondAttribute="trailingMargin" id="zXU-cV-nNt"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Xo8-K0-4Rd" appends="YES" id="X6v-f4-Bfg"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="blueColorSlider" destination="JMb-8O-dBB" id="fqN-8G-NPQ"/>
@@ -823,6 +855,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="clV-dG-jYP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Xo8-K0-4Rd">
+                    <connections>
+                        <action selector="tapGesturRecongnizer:" destination="D1o-je-bHs" id="1Av-tO-QMa"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2248.8000000000002" y="-1656.521739130435"/>
         </scene>
