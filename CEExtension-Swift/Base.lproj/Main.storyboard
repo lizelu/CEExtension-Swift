@@ -311,10 +311,10 @@
             </objects>
             <point key="canvasLocation" x="2249" y="-324"/>
         </scene>
-        <!--Image Extension View Controller-->
+        <!--ImageExtension-->
         <scene sceneID="4Dg-Li-y0b">
             <objects>
-                <viewController storyboardIdentifier="ImageExtensionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BsH-Wz-k9j" customClass="ImageExtensionViewController" customModule="CEExtension_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ImageExtensionViewController" title="ImageExtension" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BsH-Wz-k9j" customClass="ImageExtensionViewController" customModule="CEExtension_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2kN-BN-IaG"/>
                         <viewControllerLayoutGuide type="bottom" id="QvX-mK-rqW"/>

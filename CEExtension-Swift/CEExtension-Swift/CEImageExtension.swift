@@ -202,7 +202,7 @@ extension UIImage {
             
         case .down:
             transform = CGAffineTransform(translationX: rect.size.width, y: rect.size.height)
-            transform = transform.rotated(by: CGFloat(M_PI))    //逆时针旋转
+            transform = transform.rotated(by: CGFloat(M_PI))  
             
         case .downMirrored:
             transform = CGAffineTransform(translationX: 0, y: rect.size.height)
