@@ -22,10 +22,10 @@ extension UIImage {
         }
     }
 
-    /// 从将View转换成图片
+    /// 将View转换成图片
     ///
-    /// - Parameter view: <#view description#>
-    /// - Returns: <#return value description#>
+    /// - Parameter view: 要转换成Image的View
+    /// - Returns: 返回生成的图片
     class func imageFromView(view: UIView) -> UIImage? {
         let scale = UIScreen.main.scale
         UIGraphicsBeginImageContextWithOptions(view.size, false, scale)

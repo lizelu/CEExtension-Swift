@@ -36,7 +36,7 @@ class ColorExtensionViewController: UIViewController {
             return
         }
         
-        self.view.backgroundColor = UIColor.colorWithHex(hex: colorStr.intFormHex)
+        self.view.backgroundColor = UIColor.colorWithHex(hex: colorStr.intFromHex)
     }
 
     @IBAction func changeSliderValue(_ sender: UISlider) {

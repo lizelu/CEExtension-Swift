@@ -8,7 +8,9 @@
 
 import Foundation
 extension String {
-    var intFormHex: UInt32 {
+    
+    /// 将十六进制字符串转换成十进制数字
+    var intFromHex: UInt32 {
         get {
             let scanner = Scanner(string: self)
             var result : UInt32 = 0
